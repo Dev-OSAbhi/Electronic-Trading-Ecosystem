@@ -3,7 +3,7 @@
 #include <cstdint>
 #include <limits>
 
-#include "common/macros.h"
+#include "macros.h"
 
 namespace Common
 {
@@ -27,17 +27,6 @@ namespace Common
             return "INVALID";
         }
         return std::to_string(ticker_id);
-    }
-
-    typedef uint32_t ClientId;
-    constexpr auto ClientId_INVALID = std::numeric_limits<ClientId>::max();
-    inline auto clientIdToString(ClientId client_id) -> std::string
-    {
-        if (UNLIKELY(client_id == ClientId_INVALID))
-        {
-            return "INVALID";
-        }
-        return std::to_string(client_id);
     }
 
     typedef uint32_t ClientId;
